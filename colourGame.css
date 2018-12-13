@@ -19,6 +19,13 @@ h1 {
 	color: white;
 }
 
-span {
+/*span {
 	color: white;
+}
+*/
+
+#stripe {
+	text-align: center;
+	background: white;
+	height: 30px;
 }
