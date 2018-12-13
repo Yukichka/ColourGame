@@ -36,7 +36,7 @@ function pickColor(){
 
 function generateRandomColors(num){
 	var arr = []
-	for(var i = 0, i < num; i++){
+	for(var i = 0; i < num; i++){
 	arr.push(randomColor())
 	}
 	return arr;
@@ -46,5 +46,5 @@ function randomColor(){
 	var r = Math.floor(Math.random() * 256);
 	var g = Math.floor(Math.random() * 256);
 	var b = Math.floor(Math.random() * 256);
-    return "rgb(" + r +"," + g +","+ b +")";
+    return "rgb(" + r +", " + g +", "+ b +")";
 } 
