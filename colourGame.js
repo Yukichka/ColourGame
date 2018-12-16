@@ -6,10 +6,19 @@ var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
-var easyBtn = document.getElementById("easyBtn");
-var hardBtn = document.getElementById("hardBtn");
+//var easyBtn = document.getElementById("easyBtn");
+//var hardBtn = document.getElementById("hardBtn");
+var modeButton = document.querySelectorAll(".mode");
 
-easyBtn.addEventListener("click", function(){
+for (var i = 0; i < modeButton.length; i++) {
+  modeButton[i].addEventListener("click", function(){
+  modeButton[0].classList.remove("selected");
+  modeButton[1].classList.remove("selected");
+  this.classList.add("selected");
+  }) 
+}
+
+/*easyBtn.addEventListener("click", function(){
   hardBtn.classList.remove("selected")
   easyBtn.classList.add("selected")
   numSquares = 3;
@@ -39,6 +48,7 @@ hardBtn.addEventListener("click", function(){
   }
   messageDisplay.textContent = "";
 })
+*/
 
 resetButton.addEventListener("click",function(){
   colors = generateRandomColors(numSquares);
