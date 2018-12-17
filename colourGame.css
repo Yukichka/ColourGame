@@ -17,8 +17,8 @@ body {
 }
 
 #container {
-	max-width: 600px;
-	margin: 20px auto;
+	max-width: 45%;
+	margin: 5% auto;
 }
 
 h1 {
@@ -27,7 +27,7 @@ h1 {
 	margin: 0;
 	font-weight: normal;
 	text-transform: uppercase;
-	padding: 20px 0;
+	padding: 2% 0;
 }
 
 button {
@@ -61,7 +61,7 @@ button:hover {
 #stripe {
 	text-align: center;
 	background: white;
-	height: 30px;
+	height: 10%;
 }
 
 .selected {
