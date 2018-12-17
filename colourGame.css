@@ -36,6 +36,7 @@ button {
 	height: 100%;
 	letter-spacing: 1px;
 	font-size: inherit;
+	outline: none;
 }
 
 button:hover {
