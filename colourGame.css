@@ -47,10 +47,9 @@ button:hover {
 	font-size: 170%;
 }
 
-/*span {
-	color: white;
+#hexCode {
+	font-size: 170%;
 }
-*/
 
 #message {
 	text-transform: uppercase;

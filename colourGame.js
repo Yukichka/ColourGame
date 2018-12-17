@@ -7,16 +7,17 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var modeButton = document.querySelectorAll(".mode");
+var hexCode = document.getElementById("hexCode");
 
 init();
 
 function init() {
-  setmodeButton();
+  setModeButton();
   setSquares();
   reset();
 }
 // set modeButton event listener 
-function setmodeButton() {
+function setModeButton() {
   for (var i = 0; i < modeButton.length; i++) {
    modeButton[i].addEventListener("click", function(){
      modeButton[0].classList.remove("selected");
@@ -51,6 +52,7 @@ function reset() {
   colors = generateRandomColors(numSquares);
   pickedColor = pickColor();
   colorDisplay.textContent = pickedColor;
+  hexCode.textContent = hexedRGB();
   for (var i = 0; i < squares.length; i++) {
     squares[i].style.display = "block";
     if(colors[i]){
@@ -96,3 +98,21 @@ function changeColors(color){
 }
 
 
+function componentToHex(c) {
+   var hex = c.toString(16);
+   return hex.length == 1 ? "0" + hex : hex;
+  }
+// combining the hex string from the converted components
+function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+// slicing the rgb(number, number, number) string to 3 number variables and returning
+// the hexed value
+function hexedRGB(){
+  var slicedRGB = pickedColor.substring(4, pickedColor.length - 1);
+  var rgb = slicedRGB.split(',', 3);
+  var r = Number(rgb[0]);
+  var g = Number(rgb[1]);
+  var b = Number(rgb[2]);
+  return rgbToHex(r, g, b);
+}
